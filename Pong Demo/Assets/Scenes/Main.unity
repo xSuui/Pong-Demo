@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 212415963}
   - component: {fileID: 212415962}
   - component: {fileID: 212415961}
+  - component: {fileID: 212415964}
   m_Layer: 0
   m_Name: PlayerPaddle
   m_TagString: Untagged
@@ -205,7 +206,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000018626451, y: -0.00066093355}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.17356282, y: 0.14844726}
   m_EdgeRadius: 0
 --- !u!4 &212415963
 Transform:
@@ -232,6 +233,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &212415964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212415960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5993e3dae5b3634c88d43ddb18f0072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &997166364
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +411,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.000000014901161, y: 0.0013444386}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -408,7 +422,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16307306, y: 0.14951393}
   m_EdgeRadius: 0
 --- !u!4 &1617379395
 Transform:
@@ -453,6 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ee2832f20f66c49b3fff8fc53dc7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPaddle: {fileID: 212415963}
+  enemyPaddle: {fileID: 1617379395}
 --- !u!4 &1794419523
 Transform:
   m_ObjectHideFlags: 0
