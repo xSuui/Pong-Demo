@@ -5,9 +5,9 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Vector2 startingVelocity = new Vector2(5f, 5f);
+    public Vector2 startingVelocity = new Vector2(5f, 5f);
 
-    
+    public GameManager gameManager;
 
     public void ResetBall()
     {
@@ -30,6 +30,17 @@ public class BallController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+        }
+
+        if (collision.gameObject.CompareTag("WallEnemy"))
+        {
+            gameManager.ScorePlayer();
+            ResetBall();
+        }
+        else if (collision.gameObject.CompareTag("WallPlayer"))
+        {
+            gameManager.ScoreEnemy();
+            ResetBall();
         }
 
     }
