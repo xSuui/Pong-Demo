@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
 
     public GameManager gameManager;
 
+    public float speedUp = 1.1f;
+
     public void ResetBall()
     {
         transform.position = Vector3.zero;
@@ -30,6 +32,7 @@ public class BallController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+            rb.velocity *= speedUp;
         }
 
         if (collision.gameObject.CompareTag("WallEnemy"))

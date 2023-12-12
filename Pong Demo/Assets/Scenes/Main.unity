@@ -715,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingVelocity: {x: 5, y: 5}
   gameManager: {fileID: 1794419522}
+  speedUp: 1.1
 --- !u!212 &1162790326
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   enemyScore: 0
   textPointsPlayer: {fileID: 1478967603}
   textPointsEnemy: {fileID: 90121608}
+  winPoints: 5
 --- !u!4 &1794419523
 Transform:
   m_ObjectHideFlags: 0

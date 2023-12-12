@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI textPointsPlayer;
     public TextMeshProUGUI textPointsEnemy;
 
+    public int winPoints = 5;
 
     void Start()
     {
@@ -42,10 +43,20 @@ public class GameManager : MonoBehaviour
     {
         playerScore++;
         textPointsPlayer.text = playerScore.ToString();
+        CheckWin();
     }
     public void ScoreEnemy()
     {
         enemyScore++;
         textPointsEnemy.text = enemyScore.ToString();
+        CheckWin();
+    }
+
+    public void CheckWin()
+    {
+        if (enemyScore >= winPoints || playerScore >= winPoints)
+        {
+            ResetGame();
+        }
     }
 }
