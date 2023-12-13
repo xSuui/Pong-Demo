@@ -10,6 +10,8 @@ public class SaveController : MonoBehaviour
     public string namePlayer;
     public string nameEnemy;
 
+    private string saveWinnerKey = "SavedWinner";
+
     private static SaveController _instance;
     // Propriedade estática para acessar a instância
     public static SaveController Instance
@@ -46,5 +48,22 @@ public class SaveController : MonoBehaviour
     public string GetName(bool isPlayer)
     {
         return isPlayer ? namePlayer : nameEnemy;
+    }
+
+    public void Reset()
+    {
+        nameEnemy = "";
+        namePlayer = "";
+        colorEnemy = Color.white;
+        colorPlayer = Color.white;
+    }
+
+    public void SaveWinner(string winner)
+    {
+        PlayerPrefs.SetString(saveWinnerKey, winner);
+    }
+    public string GetLastWinner()
+    {
+        return PlayerPrefs.GetString(saveWinnerKey);
     }
 }
