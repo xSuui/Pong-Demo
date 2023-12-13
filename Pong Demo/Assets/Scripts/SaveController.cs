@@ -7,6 +7,9 @@ public class SaveController : MonoBehaviour
     public Color colorPlayer = Color.white;
     public Color colorEnemy = Color.white;
 
+    public string namePlayer;
+    public string nameEnemy;
+
     private static SaveController _instance;
     // Propriedade estática para acessar a instância
     public static SaveController Instance
@@ -38,5 +41,10 @@ public class SaveController : MonoBehaviour
         }
         // Mantenha o Singleton vivo entre as cenas
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public string GetName(bool isPlayer)
+    {
+        return isPlayer ? namePlayer : nameEnemy;
     }
 }
