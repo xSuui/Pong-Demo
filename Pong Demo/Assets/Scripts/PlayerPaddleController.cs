@@ -8,6 +8,20 @@ public class PlayerPaddleController : MonoBehaviour
 
     public string movementAxisName = "Vertical";
 
+    public bool isPlayer = true;
+    public SpriteRenderer spriteRenderer;
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (isPlayer)
+            spriteRenderer.color = SaveController.Instance.colorPlayer;
+        else
+            spriteRenderer.color = SaveController.Instance.colorEnemy;
+    }
+
     void Update()
     {
         // Captura da entrada vertical (seta para cima, seta para baixo, teclas W e S)

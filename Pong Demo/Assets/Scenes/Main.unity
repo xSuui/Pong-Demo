@@ -381,6 +381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   movementAxisName: Vertical
+  isPlayer: 1
+  spriteRenderer: {fileID: 212415961}
 --- !u!1 &362620826
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &784710908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   movementAxisName: Vertical2
+  isPlayer: 0
+  spriteRenderer: {fileID: 784710910}
 --- !u!212 &784710910
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1333,7 +1337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1617379393
 SpriteRenderer:
   m_ObjectHideFlags: 0
